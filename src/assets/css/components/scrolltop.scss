@@ -1,0 +1,22 @@
+.p-scrolltop {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+
+  .p-scrolltop-icon {
+    font-size: 20px;
+    color: black;
+    padding: 5px;
+  }
+
+  &.p-link {
+    background: #FF90CC;
+    height: 40px;
+    width: 40px;
+
+    &:hover {
+      background: #f06fb4;
+    }
+  }
+}

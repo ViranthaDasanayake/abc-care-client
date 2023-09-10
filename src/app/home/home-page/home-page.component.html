@@ -1,0 +1,94 @@
+<div class="background-wrapper">
+  <header #header>
+    <nav class="header-nav">
+      <div class="logo-container">
+        ABC Care
+        <!-- <img src="../../../assets/img/kikblox_logo.webp" class="logo" alt="ABC Care Logo"> -->
+      </div>
+      <div class="mobile-menu-icon" *ngIf="isMobile" (click)="toggleMobileMenu()" #mobileMenuIcon>
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="mobile-menu-panel" [ngClass]="{ 'open': mobileMenuVisible }" #mobileMenuPanel>
+        <ul class="mobile-menu">
+          <li><a (click)="scrollTo('home'); closeMobileMenuOnClick()">Home</a></li>
+          <li><a (click)="scrollTo('blog'); closeMobileMenuOnClick()">Blog</a></li>
+          <li><a (click)="scrollTo('about'); closeMobileMenuOnClick()">About Us</a></li>
+          <li><a (click)="scrollTo('gallery'); closeMobileMenuOnClick()">Gallery</a></li>
+        </ul>
+        <div class="close-icon" (click)="closeMobileMenuOnClick()">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <ul class="horizontal-menu">
+        <li><a (click)="scrollTo('home')">Home</a></li>
+        <li><a (click)="scrollTo('blog')">Blog</a></li>
+        <li><a (click)="scrollTo('about')">About Us</a></li>
+        <li><a (click)="scrollTo('gallery')">Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <p-carousel [value]="carouselItems" [circular]="true" [numVisible]="1" [numScroll]="1" [autoplayInterval]="3000">
+      <ng-template let-item pTemplate="item">
+        <div class="carousel-item" [ngClass]="{ 'even-item': isEven(item) && !isMobile }">
+          <div class="carousel-image">
+            <img [src]="item.image" alt="Screen Image">
+          </div>
+          <div class="carousel-text">
+            <div class="carousel-content">
+              <h3>{{ item.heading }}</h3>
+              <h3 class="abc-care">ABC-Care Daycare</h3>
+              <p>{{ item.text }}</p>
+            </div>
+            <div class="contact-btn">
+              <button class="contact-us-btn">Contact Us</button>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </section>
+</div>
+
+<!-- Blog Section -->
+<section id="blog">
+  <div class="section-content">
+    <h2>Latest Blog Posts</h2>
+    <ul>
+      <li><a href="#">Blog Post 1</a></li>
+      <li><a href="#">Blog Post 2</a></li>
+      <li><a href="#">Blog Post 3</a></li>
+      <li><a href="#">Blog Post 4</a></li>
+      <li><a href="#">Blog Post 5</a></li>
+      <li><a href="#">Blog Post 6</a></li>
+      <li><a href="#">Blog Post 7</a></li>
+      <li><a href="#">Blog Post 8</a></li>
+      <li><a href="#">Blog Post 9</a></li>
+      <li><a href="#">Blog Post 10</a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about">
+  <div class="section-content">
+    <h2>About Us</h2>
+    <p>We are a passionate team dedicated to providing top-quality services to our clients. Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit.</p>
+  </div>
+</section>
+
+<!-- Gallery Section -->
+<section id="gallery">
+  <div class="section-content">
+    <h2>Photo Gallery</h2>
+    <div class="gallery">
+      <img src="assets/image1.jpg" alt="Image 1">
+      <img src="assets/image2.jpg" alt="Image 2">
+      <img src="assets/image3.jpg" alt="Image 3">
+    </div>
+  </div>
+</section>
+
+<p-scrollTop target="window" [threshold]="100" icon="fas fa-arrow-up"></p-scrollTop>

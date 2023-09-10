@@ -1,0 +1,33 @@
+.p-carousel .p-carousel-content {
+
+    .p-carousel-prev,
+    .p-carousel-next {
+        display: none;
+    }
+}
+
+.p-carousel .p-carousel-content .p-carousel-indicators {
+
+    .p-carousel-indicator {
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+
+        button {
+            background-color: black;
+            width: 15px;
+            height: 15px;
+            transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+            border-radius: 50%;
+
+            &:hover {
+                background: #f06fb4;
+            }
+        }
+
+        &.p-highlight {
+            button {
+                background: #f06fb4;
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@import 'abstracts/variable.scss';
+@import 'abstracts/mixins.scss';
+@import 'base/reset.css';
+
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    margin: 0;
+}
+
+.grid,
+[class^="col-"] {
+    margin: 0;
+    padding: 0;
+}
+
+/*------------import-common-component-scss-files------------*/
+@import 'components/button.scss';
+@import 'components/paginator.scss';
+@import 'components/radio-button.scss';
+@import 'components/card.scss';
+@import 'components/scrollpanel.scss';
+@import 'components/toast.scss';
+@import 'components/checkbox.scss';
+@import 'components/dropdown.scss';
+@import 'components/text-area.scss';
+@import 'components/file-upload.scss';
+@import 'components/avatar.scss';
+@import 'components/tooltip.scss';
+@import 'components/table.scss';
+@import 'components/dialog.scss';
+@import 'components/steps.scss';
+@import 'components/panel-menu.scss';
+@import 'components/calender.scss';
+@import 'components/multiselect.scss';
+@import 'components/menubar.scss';
+@import 'components/input.scss';
+@import 'components/inputtext.scss';
+@import 'components/overlay.scss';
+@import 'components/loader.scss';
+@import 'components/scrolltop.scss';
+@import 'components/carousel.scss';
+
+/*------------import-pages-scss-files------------*/
+@import 'pages/home-page.scss';
+
+/*------------import-media-scss-file------------*/
+@import 'media.scss';
