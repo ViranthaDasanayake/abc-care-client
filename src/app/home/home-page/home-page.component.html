@@ -76,6 +76,8 @@
     <div class="col-12 program-heading">
       <h2 class="heading">Our Program</h2>
       <h2 class="sub-heading">Program we offered</h2>
+      <h2 class="message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+        been the industry's standard dummy text.</h2>
     </div>
   </div>
   <div class="content">
@@ -85,12 +87,39 @@
           <img [src]="item.imageUrl" alt="{{ item.title }} Image" />
         </div>
         <h3 class="title">{{ item.title }}</h3>
-        <div class="text-div"><p class="text">{{ item.text }}</p></div>
+        <div class="text-div">
+          <p class="text">{{ item.text }}</p>
+        </div>
       </div>
-      <!-- Add a line break for every 2 items -->
-      <!-- <div>{{i % 2 ===1 }}</div> -->
-      <!-- <div *ngIf="i % 2 === 1" style="margin-top: 52vh !important;"></div> -->
     </ng-container>
+  </div>
+</section>
+
+<!-- Our Mission Section -->
+<section id="mission">
+  <div class="grid">
+    <div class="col-12 sm:col-6 text-div">
+      <div class="grid mission-header">
+        <div class="col-12 sm:col-9">
+          <h2>Our Mission</h2>
+        </div>
+        <div class="col-12 sm:col-3">
+          <img src="../../../assets/img/rocket.png" class="rocket-img" alt="Rocket image">
+        </div>
+      </div>
+      <div class="mission-content">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry's
+          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+          make
+          a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
+          containing
+          Lorem Ipsum passages.</p>
+      </div>
+    </div>
+    <div class="col-12 sm:col-6 image-div">
+    </div>
   </div>
 </section>
 
