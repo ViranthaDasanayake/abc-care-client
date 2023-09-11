@@ -51,6 +51,55 @@
   </section>
 </div>
 
+<!-- Our Services Section -->
+<section id="services">
+  <div class="grid services-heading-block">
+    <div class="col-10 services-heading">
+      <h2 class="heading">Our Services</h2>
+      <h2 class="sub-heading">We provide our best services to your children</h2>
+    </div>
+  </div>
+  <div class="content">
+    <div class="service-div" *ngFor="let item of services" [ngStyle]="{ 'background-color': item.color }">
+      <div class="circle-image">
+        <img [src]="item.imageUrl" alt="{{ item.title }} Image" />
+      </div>
+      <h3 class="title">{{ item.title }}</h3>
+      <p class="text">{{ item.text }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- Our Program Section -->
+<section id="program">
+  <div class="grid program-heading-block">
+    <div class="col-12 program-heading">
+      <h2 class="heading">Our Program</h2>
+      <h2 class="sub-heading">Program we offered</h2>
+    </div>
+  </div>
+  <div class="content">
+    <ng-container *ngFor="let item of programs; let i = index">
+      <div class="service-div" [ngStyle]="{ 'background-color': item.color }">
+        <div class="image">
+          <img [src]="item.imageUrl" alt="{{ item.title }} Image" />
+        </div>
+        <h3 class="title">{{ item.title }}</h3>
+        <div class="text-div"><p class="text">{{ item.text }}</p></div>
+      </div>
+      <!-- Add a line break for every 2 items -->
+      <!-- <div>{{i % 2 ===1 }}</div> -->
+      <!-- <div *ngIf="i % 2 === 1" style="margin-top: 52vh !important;"></div> -->
+    </ng-container>
+  </div>
+</section>
+
+<!-- <div class="circle-image">
+  <img [src]="item.imageUrl" alt="{{ item.title }} Image" />
+</div>
+<h3 class="title">{{ item.title }}</h3>
+<p class="text">{{ item.text }}</p> -->
+
 <!-- Blog Section -->
 <section id="blog">
   <div class="section-content">

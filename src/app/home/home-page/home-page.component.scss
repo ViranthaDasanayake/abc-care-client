@@ -148,6 +148,162 @@ section {
             }
         }
     }
+
+    &#services {
+
+        .grid {
+            display: flex;
+            justify-content: center;
+
+            .services-heading {
+                text-align: center;
+
+                .heading {
+                    font-size: 35px;
+                    font-weight: 400;
+                    line-height: 45px;
+                    margin-top: 20px;
+                    color: #2FB400;
+                }
+
+                .sub-heading {
+                    font-size: 30px;
+                    font-weight: 700;
+                    line-height: 35px;
+                    margin-top: 10px;
+                    color: #279400;
+                }
+            }
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 100px;
+
+            .service-div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: justify;
+                padding: 22px;
+                border-radius: 10px;
+                width: 22%;
+                height: 50vh;
+
+                .title {
+                    margin-top: 30px;
+                    font-size: 18px;
+                }
+
+                .text {
+                    margin-top: 30px;
+                    font-size: 15px;
+                }
+
+                .circle-image {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+        }
+    }
+
+    &#program {
+        height: 200vh;
+
+        .grid {
+            display: flex;
+            text-align: left;
+
+            .program-heading {
+                text-align: left;
+
+                .heading {
+                    font-size: 35px;
+                    font-weight: 400;
+                    line-height: 45px;
+                    margin-top: 20px;
+                    color: #E58A02;
+                }
+
+                .sub-heading {
+                    font-size: 30px;
+                    font-weight: 700;
+                    line-height: 35px;
+                    margin-top: 10px;
+                    color: #9B5D00;
+                }
+            }
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .service-div {
+                display: flex;
+                flex-direction: column;
+                text-align: justify;
+                border-radius: 20px;
+                width: calc(50% - 20px);
+                height: 65vh;
+                margin: 80px 10px;
+
+                .title {
+                    margin-top: 10px;
+                    font-size: 18px;
+                    padding: 10px;
+                }
+
+                .text-div {
+                    margin-bottom: 10px;
+                    overflow-y: auto;
+                    scrollbar-width: thin;
+                    scrollbar-color: #888 transparent;
+
+                    .text {
+                        margin-top: 0px;
+                        font-size: 15px;
+                        padding: 10px;
+                    }
+                }
+
+                .text-div::-webkit-scrollbar {
+                    width: 4px;
+                }
+
+                .text-div::-webkit-scrollbar-thumb {
+                    background-color: #888;
+                    border-radius: 4px;
+                }
+
+                .image {
+                    width: 100%;
+                    height: 65%;
+                    min-height: 65%;
+                    overflow: hidden;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .mobile-menu-panel {
@@ -206,45 +362,6 @@ section {
     right: 0;
 }
 
-
-@media screen and (max-width: 768px) {
-    .background-wrapper {
-        background-image: none;
-    }
-
-    header {
-        .header-nav {
-            .logo-container {
-                padding: 10px;
-                font-size: 40px;
-
-                .logo {
-                    width: 150px;
-                }
-            }
-
-            .horizontal-menu {
-                display: none;
-
-            }
-
-            .mobile-menu {
-                display: block;
-            }
-
-            .mobile-menu-icon {
-                display: flex;
-                align-items: center;
-                margin-right: 10px;
-
-                .fas {
-                    font-size: 25px;
-                }
-            }
-        }
-    }
-}
-
 @media screen and (max-width: 320px) {
     section {
         &#home {
@@ -300,7 +417,148 @@ section {
     }
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (max-width: 425px) {
+    section {
+        &#services {
+            height: 185vh;
+
+            .grid {
+                .services-heading {
+                    .heading {
+                        font-size: 30px;
+                        line-height: 30px;
+                    }
+
+                    .sub-heading {
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            .content {
+                margin-top: 10px;
+                justify-content: center;
+
+                .service-div {
+                    width: 70%;
+                    height: 36vh;
+                    margin: 15px 20px;
+
+                    .title {
+                        margin-top: 15px;
+                        font-size: 16px;
+                    }
+
+                    .text {
+                        margin-top: 15px;
+                        font-size: 14px;
+                    }
+
+                    .circle-image {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+            }
+        }
+
+        &#program {
+            height: 180vh;
+            background-color: red;
+
+            .grid {
+                .program-heading {
+                    text-align: center;
+
+                    .heading {
+                        font-size: 30px;
+                        line-height: 30px;
+                    }
+
+                    .sub-heading {
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            .content {
+                margin-top: 10px;
+                justify-content: center;
+
+                .service-div {
+                    width: 80%;
+                    height: 35vh;
+                    margin: 20px;
+
+                    .title {
+                        margin-top: 0px;
+                        font-size: 14px;
+                        line-height: 15px;
+                        padding-top: 5px;
+                        padding-bottom: 0px;
+                    }
+
+                    .text-div {
+                        margin-bottom: 5px;
+
+                        .text {
+                            margin-top: 5px;
+                            font-size: 12px;
+                            padding-top: 0;
+                        }
+                    }
+
+                    .circle-image {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .background-wrapper {
+        background-image: none;
+    }
+
+    header {
+        .header-nav {
+            .logo-container {
+                padding: 10px;
+                font-size: 40px;
+
+                .logo {
+                    width: 150px;
+                }
+            }
+
+            .horizontal-menu {
+                display: none;
+
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .mobile-menu-icon {
+                display: flex;
+                align-items: center;
+                margin-right: 10px;
+
+                .fas {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 768px) {
     section {
         &#home {
 
@@ -355,6 +613,52 @@ section {
     }
 }
 
+@media screen and (min-width: 425px) and (max-width: 768px) {
+    section {
+        &#services {
+            .grid {
+                .services-heading {
+                    .heading {
+                        font-size: 30px;
+                        line-height: 30px;
+                    }
+
+                    .sub-heading {
+                        font-size: 20px;
+                        line-height: 20px;
+                    }
+                }
+            }
+
+            .content {
+                margin-top: 10px;
+                justify-content: center;
+
+                .service-div {
+                    width: calc(40% - 10px);
+                    height: 35vh;
+                    margin: 10px 20px;
+
+                    .title {
+                        margin-top: 10px;
+                        font-size: 14px;
+                    }
+
+                    .text {
+                        margin-top: 10px;
+                        font-size: 12px;
+                    }
+
+                    .circle-image {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1200px) {
     section {
         &#home {
@@ -390,6 +694,45 @@ section {
                         width: 200px;
                         font-size: 18px;
                         margin-top: 10%;
+                    }
+                }
+            }
+        }
+
+        section {
+            &#services {
+                .grid {
+                    .services-heading {
+
+                        .sub-heading {
+                            font-size: 27px;
+                        }
+                    }
+                }
+
+                .content {
+                    margin-top: 20px;
+                    justify-content: center;
+
+                    .service-div {
+                        width: calc(40% - 10px);
+                        height: 35vh;
+                        margin: 10px 20px;
+
+                        .title {
+                            margin-top: 20px;
+                            font-size: 18px;
+                        }
+
+                        .text {
+                            margin-top: 15px;
+                            font-size: 15px;
+                        }
+
+                        .circle-image {
+                            width: 80px;
+                            height: 80px;
+                        }
                     }
                 }
             }
