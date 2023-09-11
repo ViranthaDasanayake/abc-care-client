@@ -123,11 +123,30 @@
   </div>
 </section>
 
-<!-- <div class="circle-image">
-  <img [src]="item.imageUrl" alt="{{ item.title }} Image" />
-</div>
-<h3 class="title">{{ item.title }}</h3>
-<p class="text">{{ item.text }}</p> -->
+<!-- Testimonials Section -->
+<section id="testimonials">
+  <div class="grid">
+    <div class="col-10 testimonials-heading">
+      <h2 class="heading">Testimonials</h2>
+      <h2 class="sub-heading">Here are what our parents say about us</h2>
+    </div>
+  </div>
+  <div class="content">
+    <p-carousel [value]="testimonials" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000">
+      <ng-template let-item pTemplate="item">
+        <div class="review-block">
+          <div class="testimonial-div" [ngStyle]="{ 'background-color': item.color }">
+            <div class="circle-image">
+              <img [src]="item.imageUrl" alt="{{ item.title }} Image" />
+            </div>
+            <h3 class="title">{{ item.title }}</h3>
+            <p class="text">{{ item.text }}</p>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</section>
 
 <!-- Blog Section -->
 <section id="blog">
