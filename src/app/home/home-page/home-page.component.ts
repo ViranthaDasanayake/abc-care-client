@@ -25,11 +25,6 @@ export class HomePageComponent implements OnInit {
   ngOnInit(): void {
     this.responsiveOptions = [
       {
-        breakpoint: '1199px',
-        numVisible: 1,
-        numScroll: 1
-      },
-      {
         breakpoint: '991px',
         numVisible: 2,
         numScroll: 1
@@ -126,12 +121,18 @@ export class HomePageComponent implements OnInit {
       {
         color: '#C1FEA4',
         title: 'Person 2',
-        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text.',
+        text: 'Lorem Ipsum is Lorem Ipsum is  Lorem Ipsum is Lorem Ipsum is  Lorem Ipsum is  Lorem Ipsum is Lorem Ipsum is  Lorem Ipsum is  Lorem Ipsum is  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text.',
         imageUrl: 'https://images.unsplash.com/photo-1542000551557-3fd0ad0eb15f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80',
       },
       {
         color: '#AEFFFA',
         title: 'Person 3',
+        text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text.',
+        imageUrl: 'https://images.unsplash.com/flagged/photo-1551887373-6edba6dacbb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',
+      },
+      {
+        color: '#AEFFFA',
+        title: 'Person 4',
         text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text.',
         imageUrl: 'https://images.unsplash.com/flagged/photo-1551887373-6edba6dacbb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80',
       }

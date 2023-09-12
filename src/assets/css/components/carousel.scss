@@ -1,8 +1,26 @@
-.p-carousel .p-carousel-content {
+.p-carousel {
+    .p-carousel-content {
 
-    .p-carousel-prev,
-    .p-carousel-next {
-        display: none;
+        .p-carousel-prev,
+        .p-carousel-next {
+            width: 2rem;
+            height: 2rem;
+            color: black;
+            border: 0 none;
+            background: transparent;
+            border-radius: 50%;
+            transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+            margin: 0.5rem;
+
+            &:enabled:hover {
+                border-color: transparent;
+            }
+
+            &:focus {
+                outline: 0 none;
+                outline-offset: 0;
+            }
+        }
     }
 }
 

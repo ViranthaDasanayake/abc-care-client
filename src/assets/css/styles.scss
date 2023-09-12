@@ -47,3 +47,22 @@
 
 /*------------import-media-scss-file------------*/
 @import 'media.scss';
+
+section {
+    &#testimonials .p-carousel .p-carousel-content .p-carousel-indicators {
+
+        .p-carousel-indicator {
+            display: none;
+        }
+    }
+
+    &#home .p-carousel {
+        .p-carousel-content {
+
+            .p-carousel-prev,
+            .p-carousel-next {
+                display: none;
+            }
+        }
+    }
+}

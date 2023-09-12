@@ -53,10 +53,15 @@
 
 <!-- Our Services Section -->
 <section id="services">
-  <div class="grid services-heading-block">
-    <div class="col-10 services-heading">
+  <div class="grid">
+    <div class="col-2 img-div" *ngIf="!isMobile">
+      <img src="../../../assets/img/hand.png" alt="Service Image" class="service-image rotate-hand">
+    </div>
+    <div class="col-12 md:col-8 services-heading">
       <h2 class="heading">Our Services</h2>
       <h2 class="sub-heading">We provide our best services to your children</h2>
+    </div>
+    <div class="col-2" *ngIf="!isMobile">
     </div>
   </div>
   <div class="content">
@@ -72,14 +77,17 @@
 
 <!-- Our Program Section -->
 <section id="program">
-  <div class="grid program-heading-block">
-    <div class="col-12 program-heading">
+  <div class="grid">
+    <div class="col-8 sm:col-6 md:col-5 lg:col-4 text-div">
       <h2 class="heading">Our Program</h2>
       <h2 class="sub-heading">Program we offered</h2>
-      <h2 class="message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-        been the industry's standard dummy text.</h2>
+    </div>
+    <div class="col-4 sm:col-6 md:col-7 lg:col-8 img-div">
+      <img src="../../../assets/img/child.png" alt="Program Image" class="program-image block-animation">
     </div>
   </div>
+  <h2 class="message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+    been the industry's standard dummy text.</h2>
   <div class="content">
     <ng-container *ngFor="let item of programs; let i = index">
       <div class="service-div" [ngStyle]="{ 'background-color': item.color }">
@@ -104,7 +112,7 @@
           <h2>Our Mission</h2>
         </div>
         <div class="col-12 sm:col-3">
-          <img src="../../../assets/img/rocket.png" class="rocket-img" alt="Rocket image">
+          <img src="../../../assets/img/rocket.png" class="rocket-img launch-animation" alt="Rocket image">
         </div>
       </div>
       <div class="mission-content">
@@ -126,13 +134,19 @@
 <!-- Testimonials Section -->
 <section id="testimonials">
   <div class="grid">
-    <div class="col-10 testimonials-heading">
+    <div class="col-2 img-div" *ngIf="!isMobile">
+      <img src="../../../assets/img/children.png" alt="Testimonials Image" class="testimonial-image pulse-animation">
+    </div>
+    <div class="col-12 md:col-8 testimonials-heading">
       <h2 class="heading">Testimonials</h2>
       <h2 class="sub-heading">Here are what our parents say about us</h2>
     </div>
+    <div class="col-2" *ngIf="!isMobile">
+    </div>
   </div>
   <div class="content">
-    <p-carousel [value]="testimonials" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000">
+    <p-carousel [value]="testimonials" [numVisible]="3" [responsiveOptions]="responsiveOptions" [numScroll]="1"
+      [circular]="true" [autoplayInterval]="3000">
       <ng-template let-item pTemplate="item">
         <div class="review-block">
           <div class="testimonial-div" [ngStyle]="{ 'background-color': item.color }">
@@ -140,7 +154,9 @@
               <img [src]="item.imageUrl" alt="{{ item.title }} Image" />
             </div>
             <h3 class="title">{{ item.title }}</h3>
-            <p class="text">{{ item.text }}</p>
+            <div class="text-div">
+              <p class="text">{{ item.text }}</p>
+            </div>
           </div>
         </div>
       </ng-template>
@@ -148,44 +164,61 @@
   </div>
 </section>
 
-<!-- Blog Section -->
-<section id="blog">
-  <div class="section-content">
-    <h2>Latest Blog Posts</h2>
-    <ul>
-      <li><a href="#">Blog Post 1</a></li>
-      <li><a href="#">Blog Post 2</a></li>
-      <li><a href="#">Blog Post 3</a></li>
-      <li><a href="#">Blog Post 4</a></li>
-      <li><a href="#">Blog Post 5</a></li>
-      <li><a href="#">Blog Post 6</a></li>
-      <li><a href="#">Blog Post 7</a></li>
-      <li><a href="#">Blog Post 8</a></li>
-      <li><a href="#">Blog Post 9</a></li>
-      <li><a href="#">Blog Post 10</a></li>
-    </ul>
+<!-- Our Location Section -->
+<section id="location">
+  <div class="grid">
+    <div class="col-4 sm:col-6 md:col-8 lg:col-9 img-div">
+      <img src="../../../assets/img/boat.png" alt="Location Image" class="location-image boat-float-animation">
+    </div>
+    <div class="col-8 sm:col-6 md:col-4 lg:col-3 text-div">
+      <h2 class="heading">Our Location</h2>
+      <h2 class="sub-heading">Where to find us</h2>
+    </div>
   </div>
-</section>
-
-<!-- About Us Section -->
-<section id="about">
-  <div class="section-content">
-    <h2>About Us</h2>
-    <p>We are a passionate team dedicated to providing top-quality services to our clients. Lorem ipsum dolor sit amet,
-      consectetur adipiscing elit.</p>
-  </div>
-</section>
-
-<!-- Gallery Section -->
-<section id="gallery">
-  <div class="section-content">
-    <h2>Photo Gallery</h2>
-    <div class="gallery">
-      <img src="assets/image1.jpg" alt="Image 1">
-      <img src="assets/image2.jpg" alt="Image 2">
-      <img src="assets/image3.jpg" alt="Image 3">
+  <div class="content">
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.0177057922556!2d79.97618609524532!3d7.123944811429599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2fb10030124ef%3A0x64a3b6ab9ac8a2fc!2sUdugampola%20Maha%20Vidyalaya%2C%20Udugampola!5e0!3m2!1sen!2slk!4v1694536176986!5m2!1sen!2slk"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="grid">
+      <div class="col-12 sm:col-6">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>ABC Care Day Care is a trusted child care center in Sri Lanka. We are committed to providing exceptional
+            care and early childhood education for young minds. Our dedicated team of professionals creates a safe and
+            nurturing environment where children can learn, play, and grow.</p>
+        </div>
+      </div>
+      <div class="col-12 sm:col-6">
+        <div class="footer-section">
+          <h3>Contact Info</h3>
+          <p>123 Main Street, City, State 12345</p>
+          <p><a href="mailto:abc.care@gmail.com">abc.care@gmail.com</a></p>
+          <p>(123) 456-7890</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid">
+      <div class="col-12 sm:col-6">
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+            <li><a href="#" class="fa-brands fa-facebook"></a></li>
+            <li><a href="#" class="fa-brands fa-twitter"></a></li>
+            <li><a href="#" class="fa-brands fa-linkedin"></a></li>
+            <li><a href="#" class="fa-brands fa-instagram"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 <p-scrollTop target="window" [threshold]="100" icon="fas fa-arrow-up"></p-scrollTop>
