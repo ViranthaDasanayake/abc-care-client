@@ -13,14 +13,14 @@
           <li><a (click)="scrollTo('home'); closeMobileMenuOnClick()">Home</a></li>
           <li><a (click)="scrollTo('blog'); closeMobileMenuOnClick()">Blog</a></li>
           <li><a (click)="scrollTo('about'); closeMobileMenuOnClick()">About Us</a></li>
-          <li><a (click)="scrollTo('gallery'); closeMobileMenuOnClick()">Gallery</a></li>
+          <li><a (click)="scrollTo('location'); closeMobileMenuOnClick()">Gallery</a></li>
         </ul>
         <div class="close-icon" (click)="closeMobileMenuOnClick()">
           <i class="fas fa-times"></i>
         </div>
       </div>
       <ul class="horizontal-menu">
-        <li><a style="scroll-behavior: smooth;" (click)="scrollTo('home')">Home</a></li>
+        <li><a (click)="scrollTo('home')">Home</a></li>
         <li><a (click)="scrollTo('blog')">Blog</a></li>
         <li><a (click)="scrollTo('about')">About Us</a></li>
         <li><a (click)="scrollTo('location')">Gallery</a></li>
@@ -42,7 +42,7 @@
               <p>{{ item.text }}</p>
             </div>
             <div class="contact-btn">
-              <button class="contact-us-btn">Contact Us</button>
+              <button class="contact-us-btn" style="cursor: pointer;">Contact Us</button>
             </div>
           </div>
         </div>
