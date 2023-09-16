@@ -20,10 +20,10 @@
         </div>
       </div>
       <ul class="horizontal-menu">
-        <li><a (click)="scrollTo('home')">Home</a></li>
+        <li><a style="scroll-behavior: smooth;" (click)="scrollTo('home')">Home</a></li>
         <li><a (click)="scrollTo('blog')">Blog</a></li>
         <li><a (click)="scrollTo('about')">About Us</a></li>
-        <li><a (click)="scrollTo('gallery')">Gallery</a></li>
+        <li><a (click)="scrollTo('location')">Gallery</a></li>
       </ul>
     </nav>
   </header>
@@ -38,7 +38,7 @@
           <div class="carousel-text">
             <div class="carousel-content">
               <h3>{{ item.heading }}</h3>
-              <h3 class="abc-care">ABC-Care Daycare</h3>
+              <h1 class="abc-care">ABC-Care Daycare</h1>
               <p>{{ item.text }}</p>
             </div>
             <div class="contact-btn">
@@ -90,7 +90,7 @@
     been the industry's standard dummy text.</h2>
   <div class="content">
     <ng-container *ngFor="let item of programs; let i = index">
-      <div class="service-div" [ngStyle]="{ 'background-color': item.color }">
+      <div class="program-div" [ngStyle]="{ 'background-color': item.color }">
         <div class="image">
           <img [src]="item.imageUrl" alt="{{ item.title }} Image" />
         </div>
@@ -119,11 +119,7 @@
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
           industry's
           standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-          make
-          a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-          containing
-          Lorem Ipsum passages.</p>
+          make.</p>
       </div>
     </div>
     <div class="col-12 sm:col-6 image-div">
@@ -167,10 +163,10 @@
 <!-- Our Location Section -->
 <section id="location">
   <div class="grid">
-    <div class="col-4 sm:col-6 md:col-8 lg:col-9 img-div">
+    <div class="col-4 sm:col-6 md:col-8 lg:col-8 img-div">
       <img src="../../../assets/img/boat.png" alt="Location Image" class="location-image boat-float-animation">
     </div>
-    <div class="col-8 sm:col-6 md:col-4 lg:col-3 text-div">
+    <div class="col-8 sm:col-6 md:col-4 lg:col-4 text-div">
       <h2 class="heading">Our Location</h2>
       <h2 class="sub-heading">Where to find us</h2>
     </div>
@@ -191,7 +187,7 @@
       <div class="col-12 sm:col-6">
         <div class="footer-section">
           <h3>About Us</h3>
-          <p>ABC Care Day Care is a trusted child care center in Sri Lanka. We are committed to providing exceptional
+          <p>ABC-Care Day Care is a trusted child care center in Sri Lanka. We are committed to providing exceptional
             care and early childhood education for young minds. Our dedicated team of professionals creates a safe and
             nurturing environment where children can learn, play, and grow.</p>
         </div>

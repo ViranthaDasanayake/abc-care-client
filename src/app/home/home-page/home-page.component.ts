@@ -88,7 +88,7 @@ export class HomePageComponent implements OnInit {
       {
         color: '#AEFFFA',
         title: 'Program 1',
-        text: 'Lorem Ipsum Lorem Ipsum Lorem  Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Lorem Ipsum Lorem  Lorem Ipsum Lorem  Lorem Ipsum Lorem Ipsum is simply dummy text of Lorem Ipsum is simply dummy text of Lorem Ipsum is simply dummy text of Lorem Ipsum is simply dummy text of Lorem Ipsum is simply dummy text of Lorem Ipsum is simply dummy text of Lorem Ipsum is simply dummy text of Lorem Ipsum is simply dummy text of is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text.',
+        text: 'Lorem Ipsum Lorem Ipsum Lorem  Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Ipsum Lorem Lorem Ipsum.',
         imageUrl: 'https://images.unsplash.com/photo-1542000551557-3fd0ad0eb15f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80',
       },
       {
@@ -147,9 +147,33 @@ export class HomePageComponent implements OnInit {
   scrollTo(sectionName: string) {
     const section = document.getElementById(sectionName);
     if (section) {
-      this.renderer.setProperty(document.documentElement, 'scrollTop', section.offsetTop - 0);
+      const startTime = performance.now();
+      const startPosition = window.pageYOffset;
+      const targetPosition = section.offsetTop;
+      const duration = 900;
+
+      function scrollAnimation(currentTime: number) {
+        const timeElapsed = currentTime - startTime;
+        const scrollPosition = easeInOut(timeElapsed, startPosition, targetPosition - startPosition, duration);
+
+        window.scrollTo(0, scrollPosition);
+
+        if (timeElapsed < duration) {
+          requestAnimationFrame(scrollAnimation);
+        }
+      }
+
+      function easeInOut(t: number, b: number, c: number, d: number): number {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+      }
+
+      requestAnimationFrame(scrollAnimation);
     }
   }
+
 
   toggleMobileMenu() {
     this.mobileMenuVisible = !this.mobileMenuVisible;
