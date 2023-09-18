@@ -29,7 +29,7 @@
   </header>
 
   <section id="home">
-    <p-carousel [value]="carouselItems" [circular]="true" [numVisible]="1" [numScroll]="1" [autoplayInterval]="3000">
+    <p-carousel [value]="carouselItems" [circular]="true" [numVisible]="1" [numScroll]="1" [autoplayInterval]="5000">
       <ng-template let-item pTemplate="item">
         <div class="carousel-item" [ngClass]="{ 'even-item': isEven(item) && !isMobile }">
           <div class="carousel-image">
@@ -87,6 +87,7 @@
     </div>
   </div>
   <h2 class="message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+    been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
     been the industry's standard dummy text.</h2>
   <div class="content">
     <ng-container *ngFor="let item of programs; let i = index">
@@ -119,6 +120,7 @@
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
           industry's
           standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
+          make. standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
           make.</p>
       </div>
     </div>
@@ -142,7 +144,7 @@
   </div>
   <div class="content">
     <p-carousel [value]="testimonials" [numVisible]="3" [responsiveOptions]="responsiveOptions" [numScroll]="1"
-      [circular]="true" [autoplayInterval]="3000">
+      [circular]="true" [autoplayInterval]="5000">
       <ng-template let-item pTemplate="item">
         <div class="review-block">
           <div class="testimonial-div" [ngStyle]="{ 'background-color': item.color }">
@@ -173,8 +175,7 @@
   </div>
   <div class="content">
     <div class="map">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.0177057922556!2d79.97618609524532!3d7.123944811429599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2fb10030124ef%3A0x64a3b6ab9ac8a2fc!2sUdugampola%20Maha%20Vidyalaya%2C%20Udugampola!5e0!3m2!1sen!2slk!4v1694536176986!5m2!1sen!2slk"
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.0152548298356!2d79.94752017488948!3d7.124228615891262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2fbe185709df1%3A0x9dfdd2249722ce8!2zVml0aGHigJlzIGhvbWU!5e0!3m2!1sen!2slk!4v1695055425709!5m2!1sen!2slk"
         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
