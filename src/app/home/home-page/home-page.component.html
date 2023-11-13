@@ -2,8 +2,7 @@
   <header #header>
     <nav class="header-nav">
       <div class="logo-container">
-        ABC Care
-        <!-- <img src="../../../assets/img/kikblox_logo.webp" class="logo" alt="ABC Care Logo"> -->
+        <img src="../../../assets/img/abc_care_logo.png" class="logo" alt="ABC Care Logo">
       </div>
       <div class="mobile-menu-icon" *ngIf="isMobile" (click)="toggleMobileMenu()" #mobileMenuIcon>
         <i class="fas fa-bars"></i>
@@ -132,11 +131,17 @@
       <div class="mission-content">
         <p>To secure a place in our Preschool, Aftercare and Vacation Care Programs starting from December 2023, please
           contact</p><br>
-        <p class="ml-3" style="font-weight: bold;"><span style="font-weight: bold;">Mobile</span>: 070 665 6686</p>
-        <p class="ml-3" style="font-weight: bold;"><span style="font-weight: bold;">WhatsApp</span>: +61 40 324 3411</p>
-        <p class="ml-3" style="font-weight: bold;"><a style="font-weight: bold;" href="mailto:info@abccarecentre.com"
-            class="registration-email"><span style="font-weight: bold;">Email</span>:
-            info@abccarecentre.com</a></p><br>
+        <div class="row">
+          <div class="col-10 md:col-8 mx-auto">
+            <p style="font-weight: bold;"><span style="font-weight: bold;">Mobile</span>: 070 665 6686</p>
+            <p style="font-weight: bold;"><span style="font-weight: bold;">WhatsApp</span>: +61 40 324 3411
+            </p>
+            <p style="font-weight: bold;"><a style="font-weight: bold;" href="mailto:info@abccarecentre.com"
+                class="registration-email"><span style="font-weight: bold;">Email</span>:
+                info@abccarecentre.com</a></p>
+          </div>
+        </div>
+        <br>
         <p>We encourage parents to take advantage of this early registration opportunity to guarantee a place for their
           child in these sought-after programs.</p><br>
         <p style="font-weight: bold;">We charge no "Admission Fees" for a limited period.</p>
@@ -206,20 +211,6 @@
     <div class="grid">
       <div class="col-12 sm:col-6">
         <div class="footer-section">
-          <h3>About Us</h3>
-          <p>ABC Care Private Limited, an English medium childcare provider, operates under Australian management,
-            ensuring a high standard of childcare.</p><br><br>
-          <h3>Follow Us</h3>
-          <ul class="social-icons">
-            <li><a class="fa-brands fa-facebook"></a></li>
-            <li><a class="fa-brands fa-twitter"></a></li>
-            <li><a class="fa-brands fa-linkedin"></a></li>
-            <li><a class="fa-brands fa-instagram"></a></li>
-          </ul><br><br>
-        </div>
-      </div>
-      <div class="col-12 sm:col-6">
-        <div class="footer-section">
           <h3>Contact Us</h3>
           <p>31/8/G1, 2nd Lane,</p>
           <p>Wanatha Road,</p>
@@ -228,6 +219,23 @@
           <p><a href="mailto:info@abccarecentre.com">info@abccarecentre.com</a></p><br>
           <p><i class="fa-solid fa-square-phone mr-2"></i>070 665 6686</p>
           <p><i class="fa-brands fa-whatsapp mr-2"></i>+61 40 324 3411</p>
+        </div>
+      </div>
+      <div class="col-12 sm:col-6">
+        <div class="footer-section">
+          <h3>About Us</h3>
+          <p>ABC Care Private Limited, an English medium childcare provider, operates under Australian management,
+            ensuring a high standard of childcare.</p><br>
+          <h3>Follow Us</h3>
+          <ul class="social-icons">
+            <li><a class="fa-brands fa-facebook"></a></li>
+            <li><a class="fa-brands fa-twitter"></a></li>
+            <li><a class="fa-brands fa-linkedin"></a></li>
+            <li><a class="fa-brands fa-instagram"></a></li>
+          </ul><br>
+          <div>
+            <img src="../../../assets/img/abc_care_logo.png" style="width: 50px;" alt="ABC Care Logo">
+          </div>
         </div>
       </div>
     </div>

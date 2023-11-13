@@ -11,17 +11,12 @@
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://www.abccaredaycare.lk/blog</loc>
+      <loc>https://www.abccaredaycare.lk/programs</loc>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
    <url>
-      <loc>https://www.abccaredaycare.lk/about-us</loc>
-      <changefreq>weekly</changefreq>
-      <priority>0.7</priority>
-   </url>
-   <url>
-      <loc>https://www.abccaredaycare.lk/gallery</loc>
+      <loc>https://www.abccaredaycare.lk/registration</loc>
       <changefreq>weekly</changefreq>
       <priority>0.7</priority>
    </url>
