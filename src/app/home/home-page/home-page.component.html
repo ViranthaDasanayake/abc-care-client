@@ -11,9 +11,9 @@
       <div class="mobile-menu-panel" [ngClass]="{ 'open': mobileMenuVisible }" #mobileMenuPanel>
         <ul class="mobile-menu">
           <li><a (click)="scrollTo('home'); closeMobileMenuOnClick()">Home</a></li>
-          <li><a (click)="scrollTo('blog'); closeMobileMenuOnClick()">Blog</a></li>
-          <li><a (click)="scrollTo('about'); closeMobileMenuOnClick()">About Us</a></li>
-          <li><a (click)="scrollTo('location'); closeMobileMenuOnClick()">Gallery</a></li>
+          <!-- <li><a (click)="scrollTo('services'); closeMobileMenuOnClick()">Services</a></li> -->
+          <li><a (click)="scrollTo('program'); closeMobileMenuOnClick()">Programs</a></li>
+          <li><a (click)="scrollTo('mission'); closeMobileMenuOnClick()">Registration</a></li>
         </ul>
         <div class="close-icon" (click)="closeMobileMenuOnClick()">
           <i class="fas fa-times"></i>
@@ -21,9 +21,9 @@
       </div>
       <ul class="horizontal-menu">
         <li><a (click)="scrollTo('home')">Home</a></li>
-        <li><a (click)="scrollTo('blog')">Blog</a></li>
-        <li><a (click)="scrollTo('about')">About Us</a></li>
-        <li><a (click)="scrollTo('location')">Gallery</a></li>
+        <!-- <li><a (click)="scrollTo('services')">Services</a></li> -->
+        <li><a (click)="scrollTo('program')">Programs</a></li>
+        <li><a (click)="scrollTo('mission')">Registration</a></li>
       </ul>
     </nav>
   </header>
@@ -38,11 +38,11 @@
           <div class="carousel-text">
             <div class="carousel-content">
               <h3>{{ item.heading }}</h3>
-              <h1 class="abc-care">ABC-Care Daycare</h1>
+              <h1 class="abc-care">{{ item.subHeading }}</h1>
               <p>{{ item.text }}</p>
             </div>
             <div class="contact-btn">
-              <button class="contact-us-btn" style="cursor: pointer;">Contact Us</button>
+              <button class="contact-us-btn" style="cursor: pointer;" (click)="showDialog()">Contact Us</button>
             </div>
           </div>
         </div>
@@ -51,15 +51,31 @@
   </section>
 </div>
 
+<p-dialog header="Contact Details" [(visible)]="displayDialog" [modal]="true" [responsive]="true">
+  <div style="text-align: center;">
+    <br>
+    <p>31/8/G1, 2nd Lane,</p>
+    <p>Wanatha Road,</p>
+    <p>Gangodawila,</p>
+    <p>Nugegoda</p>
+    <br><br>
+    <p><a href="mailto:info@abccarecentre.com">Email : info@abccarecentre.com</a></p><br>
+    <p>Phone : 070 665 6686</p><br>
+    <p>WhatsApp : +61 40 324 3411</p><br>
+  </div>
+  <br>
+  <button pButton type="button" label="Close" (click)="hideDialog()"></button>
+</p-dialog>
+
 <!-- Our Services Section -->
-<section id="services">
+<!-- <section id="services">
   <div class="grid">
     <div class="col-2 img-div" *ngIf="!isMobile">
       <img src="../../../assets/img/hand.png" alt="Service Image" class="service-image rotate-hand">
     </div>
     <div class="col-12 md:col-8 services-heading">
       <h2 class="heading">Our Services</h2>
-      <h2 class="sub-heading">We provide our best services to your children</h2>
+      <h2 class="sub-heading">We offer a range of services to meet your needs</h2>
     </div>
     <div class="col-2" *ngIf="!isMobile">
     </div>
@@ -73,7 +89,7 @@
       <p class="text">{{ item.text }}</p>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- Our Program Section -->
 <section id="program">
@@ -86,9 +102,6 @@
       <img src="../../../assets/img/child.png" alt="Program Image" class="program-image block-animation">
     </div>
   </div>
-  <h2 class="message">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-    been the industry's standard dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-    been the industry's standard dummy text.</h2>
   <div class="content">
     <ng-container *ngFor="let item of programs; let i = index">
       <div class="program-div" [ngStyle]="{ 'background-color': item.color }">
@@ -109,19 +122,24 @@
   <div class="grid">
     <div class="col-12 sm:col-6 text-div">
       <div class="grid mission-header">
-        <div class="col-12 sm:col-9">
-          <h2>Our Mission</h2>
+        <div class="col-12 md:col-7">
+          <h2>Registration</h2>
         </div>
-        <div class="col-12 sm:col-3">
+        <div class="col-12 md:col-5">
           <img src="../../../assets/img/rocket.png" class="rocket-img launch-animation" alt="Rocket image">
         </div>
       </div>
       <div class="mission-content">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry's
-          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-          make. standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-          make.</p>
+        <p>To secure a place in our Preschool, Aftercare and Vacation Care Programs starting from December 2023, please
+          contact</p><br>
+        <p class="ml-3" style="font-weight: bold;"><span style="font-weight: bold;">Mobile</span>: 070 665 6686</p>
+        <p class="ml-3" style="font-weight: bold;"><span style="font-weight: bold;">WhatsApp</span>: +61 40 324 3411</p>
+        <p class="ml-3" style="font-weight: bold;"><a style="font-weight: bold;" href="mailto:info@abccarecentre.com"
+            class="registration-email"><span style="font-weight: bold;">Email</span>:
+            info@abccarecentre.com</a></p><br>
+        <p>We encourage parents to take advantage of this early registration opportunity to guarantee a place for their
+          child in these sought-after programs.</p><br>
+        <p style="font-weight: bold;">We charge no "Admission Fees" for a limited period.</p>
       </div>
     </div>
     <div class="col-12 sm:col-6 image-div">
@@ -130,7 +148,7 @@
 </section>
 
 <!-- Testimonials Section -->
-<section id="testimonials">
+<!-- <section id="testimonials">
   <div class="grid">
     <div class="col-2 img-div" *ngIf="!isMobile">
       <img src="../../../assets/img/children.png" alt="Testimonials Image" class="testimonial-image pulse-animation">
@@ -160,7 +178,7 @@
       </ng-template>
     </p-carousel>
   </div>
-</section>
+</section> -->
 
 <!-- Our Location Section -->
 <section id="location">
@@ -175,43 +193,41 @@
   </div>
   <div class="content">
     <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.0152548298356!2d79.94752017488948!3d7.124228615891262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2fbe185709df1%3A0x9dfdd2249722ce8!2zVml0aGHigJlzIGhvbWU!5e0!3m2!1sen!2slk!4v1695055425709!5m2!1sen!2slk"
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d573.2959196710402!2d79.90285850197685!3d6.859696570326785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a63cb5ff9cd%3A0x61ceb926924a01f!2s63%202nd%20Ln%2C%20Nugegoda!5e0!3m2!1sen!2slk!4v1699696678948!5m2!1sen!2slk"
         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 </section>
 
-<footer class="footer">
+<footer class="footer" id="contact-us">
   <div class="container">
     <div class="grid">
       <div class="col-12 sm:col-6">
         <div class="footer-section">
           <h3>About Us</h3>
-          <p>ABC-Care Day Care is a trusted child care center in Sri Lanka. We are committed to providing exceptional
-            care and early childhood education for young minds. Our dedicated team of professionals creates a safe and
-            nurturing environment where children can learn, play, and grow.</p>
-        </div>
-      </div>
-      <div class="col-12 sm:col-6">
-        <div class="footer-section">
-          <h3>Contact Info</h3>
-          <p>123 Main Street, City, State 12345</p>
-          <p><a href="mailto:abc.care@gmail.com">abc.care@gmail.com</a></p>
-          <p>(123) 456-7890</p>
-        </div>
-      </div>
-    </div>
-    <div class="grid">
-      <div class="col-12 sm:col-6">
-        <div class="footer-section">
+          <p>ABC Care Private Limited, an English medium childcare provider, operates under Australian management,
+            ensuring a high standard of childcare.</p><br><br>
           <h3>Follow Us</h3>
           <ul class="social-icons">
-            <li><a href="#" class="fa-brands fa-facebook"></a></li>
-            <li><a href="#" class="fa-brands fa-twitter"></a></li>
-            <li><a href="#" class="fa-brands fa-linkedin"></a></li>
-            <li><a href="#" class="fa-brands fa-instagram"></a></li>
-          </ul>
+            <li><a class="fa-brands fa-facebook"></a></li>
+            <li><a class="fa-brands fa-twitter"></a></li>
+            <li><a class="fa-brands fa-linkedin"></a></li>
+            <li><a class="fa-brands fa-instagram"></a></li>
+          </ul><br><br>
+        </div>
+      </div>
+      <div class="col-12 sm:col-6">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>31/8/G1, 2nd Lane,</p>
+          <p>Wanatha Road,</p>
+          <p>Gangodawila,</p>
+          <p>Nugegoda</p><br>
+          <p><a href="mailto:info@abccarecentre.com">info@abccarecentre.com</a></p><br>
+          <p><i class="fa-solid fa-square-phone mr-2"></i>070 665 6686</p>
+          <p><i class="fa-brands fa-whatsapp mr-2"></i>+61 40 324 3411</p>
         </div>
       </div>
     </div>

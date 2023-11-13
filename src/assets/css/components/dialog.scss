@@ -1,12 +1,15 @@
 .p-dialog {
     border-radius: 3px;
-    box-shadow: 0 1px 3px #000000;
+    box-shadow: none;
     border: 0 none;
+    height: 40vh;
+    width: 40vw;
+    border-radius: 100px;
 
     .p-dialog-header {
         border-bottom: 0 none;
-        background: #ffffff;
-        color: #343a40;
+        background: #FFE0FC;
+        color: #f06fb4;
         padding: 1.5rem;
         border-top-right-radius: 3px;
         border-top-left-radius: 3px;
@@ -17,7 +20,7 @@
         .p-dialog-title {
             font-weight: 700;
             font-size: 1.5rem;
-            color: #185ADB;
+            color: #f06fb4;
             text-align: center;
             flex-grow: 1;
         }
@@ -25,7 +28,7 @@
         .p-dialog-header-icon {
             width: 2rem;
             height: 2rem;
-            color: red;
+            color: black;
             border: 0 none;
             background: transparent;
             border-radius: 50%;
@@ -54,12 +57,26 @@
     }
 
     .p-dialog-content {
-        background: #fbfbfb;
+        background: #FFE0FC;
         color: #495057;
+
+        p,
+        a {
+            font-size: 15px;
+            line-height: 20px;
+            font-weight: 600;
+            color: #495057;
+            text-decoration: none;
+        }
     }
 }
 
 @media (max-width: 768px) {
+    .p-dialog {
+        height: 60vh;
+        width: 80vw;
+    }
+
     .p-dynamic-dialog {
         width: 80% !important;
     }

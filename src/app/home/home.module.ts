@@ -4,6 +4,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { RouterModule } from '@angular/router';
 import { ScrollTopModule } from 'primeng/scrolltop';
 import { CarouselModule } from 'primeng/carousel';
+import { DialogModule } from 'primeng/dialog';
 
 const homeRouting: ModuleWithProviders<HomeModule> = RouterModule.forChild([
   {
@@ -20,7 +21,8 @@ const homeRouting: ModuleWithProviders<HomeModule> = RouterModule.forChild([
     CommonModule,
     homeRouting,
     ScrollTopModule,
-    CarouselModule
+    CarouselModule,
+    DialogModule
   ]
 })
 export class HomeModule { }
