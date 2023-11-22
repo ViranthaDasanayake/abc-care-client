@@ -73,8 +73,12 @@
 
 @media (max-width: 768px) {
     .p-dialog {
-        height: 60vh;
+        height: 50vh;
         width: 80vw;
+
+        .p-dialog-content {
+            padding: 20px;
+        }
     }
 
     .p-dynamic-dialog {
