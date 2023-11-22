@@ -56,8 +56,8 @@ export class HomePageComponent implements OnInit {
         id: 3,
         image: 'https://images.unsplash.com/photo-1544776193-32d404ae608a?q=80&w=1929&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         heading: 'What we do',
-        subHeading: 'ABC After School Care',
-        text: 'ABC After School Care service provides a safe and caring environment for your child after a school day until you pick up your child. Where needed, we provide homework assistance, so your child enjoys quality family time once they go home.'
+        subHeading: 'ABC Afterschool Care',
+        text: 'ABC Afterschool Care service provides a safe and caring environment for your child after a school day until you pick up your child. Where needed, we provide homework assistance, so your child enjoys quality family time once they go home.'
       },
       {
         id: 4,
@@ -71,7 +71,7 @@ export class HomePageComponent implements OnInit {
         image: 'https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?q=80&w=1772&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         heading: 'What we do',
         subHeading: 'ABC Preschool',
-        text: 'At ABC Preschool, we provide an excellent foundation and a strong start for your child’s education journey.'
+        text: 'At ABC Preschool, we provide an excellent foundation and a strong start for your child’s education journey, based on Australian curriculum.'
       }
     ];
 
@@ -111,8 +111,8 @@ export class HomePageComponent implements OnInit {
       },
       {
         color: '#FBCFFF',
-        title: 'ABC After School Care: Extending Support Beyond School Hours',
-        text: 'Our ABC Aftercare program will offer working parents’ peace of mind. We recognise the challenges of balancing work and family life and create a safe and structured environment for your child after their regular school day ends. Our trained staff will be there to assist with homework, engage in enriching activities, and ensure your child\'s well-being until you\'re ready to pick them up.',
+        title: 'ABC Afterschool Care: Extending Support Beyond School Hours',
+        text: 'Our ABC Afterschool care program will offer working parents’ peace of mind. We recognise the challenges of balancing work and family life and create a safe and structured environment for your child after their regular school day ends. Our trained staff will be there to assist with homework, engage in enriching activities, and ensure your child\'s well-being until you\'re ready to pick them up.',
         imageUrl: 'https://images.unsplash.com/photo-1509163245925-f4255dea7727?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80',
       },
       {
