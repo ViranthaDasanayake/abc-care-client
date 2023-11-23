@@ -389,6 +389,28 @@ section {
         display: grid;
         align-items: center;
 
+        .download-form-btn-row {
+            display: flex;
+            justify-content: left;
+
+            .download-form-btn {
+                background-color: #137E78;
+                padding: 10px 15px;
+                border-radius: 10px;
+                height: 50px;
+                font-size: 18px;
+                color: white;
+                margin-top: 10px;
+                border: none;
+                cursor: pointer;
+            }
+
+            .download-form-btn:hover {
+                background-color: #21aea7;
+                color: black;
+            }
+        }
+
         .text-div {
             background-color: #AEFFFA;
             height: 90vh;
@@ -1026,6 +1048,18 @@ section {
             margin-top: 20px;
             height: 120vh;
 
+            .download-form-btn-row {
+                justify-content: center;
+                padding-right: 10vw;
+
+                .download-form-btn {
+                    width: 100%;
+                    padding: 10px;
+                    height: 40px;
+                    font-size: 16px;
+                }
+            }
+
             .text-div {
                 height: 85vh;
 
@@ -1057,7 +1091,7 @@ section {
                     a,
                     span {
                         font-size: 16px;
-                        line-height: 25px;
+                        line-height: 21px;
                     }
 
                     p span {
@@ -1416,6 +1450,16 @@ section {
         padding: 10px 30px;
 
         &#mission {
+            .download-form-btn-row {
+                justify-content: center;
+
+                .download-form-btn {
+                    padding: 10px;
+                    height: 40px;
+                    font-size: 16px;
+                }
+            }
+
             .text-div {
                 .mission-header {
                     text-align: center;
@@ -1443,7 +1487,7 @@ section {
                     a,
                     span {
                         font-size: 15px;
-                        line-height: 22px;
+                        line-height: 20px;
                     }
                 }
             }
@@ -1569,6 +1613,15 @@ section {
         }
 
         &#mission {
+
+            .download-form-btn-row {
+                .download-form-btn {
+                    padding: 10px;
+                    height: 40px;
+                    font-size: 16px;
+                }
+            }
+
             .text-div {
 
                 .mission-content {
@@ -1580,8 +1633,8 @@ section {
                     p,
                     a,
                     span {
-                        font-size: 18px;
-                        line-height: 26px;
+                        font-size: 16px;
+                        line-height: 23px;
                     }
                 }
             }

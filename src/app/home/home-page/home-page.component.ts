@@ -16,6 +16,7 @@ export class HomePageComponent implements OnInit {
   testimonials: any;
   responsiveOptions: any;
   displayDialog: boolean = false;
+  pdfUrl = 'https://firebasestorage.googleapis.com/v0/b/abccare.appspot.com/o/Virantha_Dasanayake_Resume.pdf?alt=media';
 
   constructor(
     private renderer: Renderer2
@@ -220,5 +221,10 @@ export class HomePageComponent implements OnInit {
 
   hideDialog() {
     this.displayDialog = false;
+  }
+
+
+  downloadPdf(): void {
+    window.open(this.pdfUrl, '_blank');
   }
 }
