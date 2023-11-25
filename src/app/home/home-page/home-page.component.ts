@@ -16,7 +16,7 @@ export class HomePageComponent implements OnInit {
   testimonials: any;
   responsiveOptions: any;
   displayDialog: boolean = false;
-  pdfUrl = 'https://firebasestorage.googleapis.com/v0/b/abccare.appspot.com/o/Virantha_Dasanayake_Resume.pdf?alt=media';
+  pdfUrl = 'http://abccarecentre.com/downloads/application.pdf';
 
   constructor(
     private renderer: Renderer2
